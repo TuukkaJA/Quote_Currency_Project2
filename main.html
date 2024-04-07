@@ -1,22 +1,40 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Facts</title>
-    <meta name="viweport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css">
-    <script src="main.js" defer></script>
-</head>
-<body>
-    <div class="fact-box">
-        <h1>Random Useless Fact Generator</h1>
-        <blockquote id="fact">LOADING...</blockquote>
-        <p id="source">Source: <a href="https://uselessfacts.jsph.pl/random.json?language=en">Useless Facts</a></p>
-        <div>
-            <button type="button" onclick="getFact(url)" id="new-fact">Generate</button>
-        </div>
+    <head>
+        <link rel="icon" type="image/x-icon" href="Quote_Generator_favicon.ico">
+        <title>Quote generator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Script for the site -->
+        <script src="main.js" defer></script>
 
-    </div>
-</body>
-</html> 
+        <div class="currency-box">
+            <h1>Currency Converter</h1>
+            <div class="currency-input">
+                <label for="currency">Currency:</label>
+                <input type="text" id="currency" placeholder="Enter currency">
+            </div>
+            <div class="currency-output">
+                <label for="converted-currency">Converted currency:</label>
+                <span id="converted-currency">Loading...</span>
+            </div>
+            <button type="button" onclick="convertCurrency(api_url)" id="Convert"><img src="convert-icon.png">Convert</button>
+        </div>
+        <!-- here comes the Quote generators user interface -->
+        <div class="quote-box">
+            <h1>Quote Generator</h1>
+            <blockquote>Loading...</blockquote>
+            <span>Loading...</span>
+
+          <div>
+            <button type="button" onclick="getQuote2(url)" id="Generate"><img src="generate-icon.png">Generate</button>
+            <button type="button" onclick="shareOnTwitter()" id="share"><img src="x.png">Share</button> 
+          </div>
+
+        </div>
+    </body>
+</html>
