@@ -1,21 +1,4 @@
-//assigning a link of the api to a variable "api_url"
-/*const api_url = "https://api.quotable.io/random"
-//Function "getQuote" fetches data from the api url and assigns it to the html elements
-async function getQuote (url) {
-  const response = await fetch(url);
-  let data = await response.json();
-  //creating variables for quote and author data
-  const quote = data.content;
-  const author = data.author;
-  //we assign quote and author data to appropriate html elements 
-  document.querySelector(".quote-box blockquote").textContent = `"${quote}"`;
-  document.querySelector(".quote-box span").textContent = `${author}`;
-  console.log(data);
-}
-//calling the function "getQuote" with the api url as a parameter
-getQuote(api_url);*/
-//function "shareOnTwitter" opens a new window with quote and author data to share on twitter
-
+//Function to share the quote on Twitter
 function shareOnTwitter () {
     const quote = document.querySelector(".quote-box blockquote").textContent;
     const author = document.querySelector(".quote-box span").textContent;
@@ -31,17 +14,15 @@ function shareOnTwitter () {
   const url = "https://api.api-ninjas.com/v1/quotes?category=";
   
   async function getQuote2(url) {
-    const headers = new Headers({
-      'X-Api-Key': 'RylRlqXFMgGInIYXdt2IcA==gNiKEFiWcAxq9LW4'
-    });
-  
+    //fetching the data from the API
     const response = await fetch(url, {
       method: 'GET',
-      headers: headers
+      headers: {
+        'X-Api-Key': 'RylRlqXFMgGInIYXdt2IcA==gNiKEFiWcAxq9LW4'}
     });
-  
+    //converting the data to JSON
     let data = await response.json();
-  
+  //the data comes in an array, so we need to get the object inside the array
     const quoteObject = data[0];
     const quote = quoteObject.quote;
     const author = quoteObject.author;
