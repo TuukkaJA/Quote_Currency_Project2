@@ -5,20 +5,8 @@
 }
 body {
     background: rgb(32, 30, 30);
-}
-
-.side-box {
-    background: rgb(0, 159, 218);
-    width: 300px;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(-50%, -50%);
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 10px 20px 0px rgb(0, 159, 218);
+    margin-top: -50px;
+    margin-bottom: 100px;
 }
 
 .currency-box {
@@ -70,6 +58,36 @@ body {
     font-size: 20px;
 }
 
+.currency-box select {
+    width: 70px;
+    padding: 5px;
+    font-size: 17px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.currency-output select {
+    width: 80px;
+    padding: 5px;
+    font-size: 17px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.currency-box .convert span {
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: white;
+    border: 1px solid black;
+    padding: 5px;
+    height: 50px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .currency-input input {
     width: 142px;
     padding: 5px;
@@ -81,9 +99,14 @@ body {
 
 .currency-output label {
     font-size: 20px;
-    margin-top: 10px;
-    
+    padding: 5px;
+}
 
+.currency-output input {
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+    width: 150px;
 }
 
 .currency-output span {
@@ -210,13 +233,25 @@ body {
     .currency-box {
         width: 90%;
     }
+    .convert button {
+        padding: 20px;
+    }
     body {
         margin-top: 50px;
         margin-bottom: 120px;
     }
     .currency-output label{
-        width: 90%;
-    
+        padding: 5px;
+        height:auto;
+        width: auto;
+    }
+    .currency-box .convert span {
+        height: auto;
+        width: auto;
+    }
+
+    .currency-box select {
+        width: 65px;
     }
 }
 
