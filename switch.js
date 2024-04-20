@@ -4,4 +4,4 @@ function switchCurrencies () {
 
     document.getElementById("fromCurrency").value = toCurrency;
     document.getElementById("toCurrency").value = fromCurrency;
-}
+};
