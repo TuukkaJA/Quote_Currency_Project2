@@ -8,7 +8,8 @@ body {
     margin-top: -50px;
     margin-bottom: 100px;
 }
-
+/* styling is gotten and adapted to this project from a video: https://www.youtube.com/watch?v=FiUVwPYYT5A&t=854s */
+ 
 .currency-box {
     background: rgb(0, 159, 218);
     width: 700px;
@@ -53,21 +54,8 @@ body {
     transform: translateX(-50%);
 }
 
-.currency-input label {
-    margin-top: 5px;
-    font-size: 20px;
-}
-
 .currency-box select {
-    width: 70px;
-    padding: 5px;
-    font-size: 17px;
-    border-radius: 10px;
-    border: 1px solid black;
-}
-
-.currency-output select {
-    width: 80px;
+    width: 73px;
     padding: 5px;
     font-size: 17px;
     border-radius: 10px;
@@ -205,14 +193,18 @@ body {
     margin: 20px;
     width: 150px;
     height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 20px;
     cursor: pointer;
-    box-shadow: 0 10px 20px 0px rgb(138, 133, 131)
-    
+    box-shadow: 0 10px 20px 0px rgb(138, 133, 131);
+}
 
+.currency-input button {
+   width: 30px;
+   height: 30px;
+   border-radius: 10px;
+   margin: 5px;
+   border: 0px;
+   box-shadow: none;
 }
 
 .quote-box button img {
@@ -251,7 +243,7 @@ body {
     }
 
     .currency-box select {
-        width: 65px;
+        width: 73px;
     }
 }
 

@@ -14,12 +14,12 @@
 
         <div class="currency-box">
             <h1>Currency Converter</h1>
+            
             <div class="currency-input">
-            <form id="currencyForm">
+            
 
-            <label for="fromCurrency">From:</label>
             <select id="fromCurrency">
-                <option value="" disabled selected></option>
+                <option value="" disabled selected>From</option>
                 <option value="USD">USD</option>
                 <option value="EUR">EUR</option>
                 <option value="GBP">GBP</option>
@@ -27,10 +27,9 @@
                 <option value="NOK">NOK</option>
                 <!-- Add more currencies as needed -->
             </select>
-
-            <label for="toCurrency">To:</label>
+            <button type="button" id="switch" onclick="switchCurrencies()"><img src="switch.png" width="30px"></button>
             <select id="toCurrency">
-                <option value="" disabled selected></option>
+                <option value="" disabled selected> To </option>
                 <option value="USD">USD</option>
                 <option value="EUR">EUR</option>
                 <option value="GBP">GBP</option>
@@ -38,8 +37,8 @@
                 <option value="NOK">NOK</option>
                 <!-- Add more currencies as needed -->
             </select>
+    
         </div>
-
             <br>
             <div class="currency-output">
             <label for="amount">Amount:</label>
@@ -53,7 +52,7 @@
             </div>
         </div>
         
-        </form>
+        
         
         <!-- here comes the Quote generators user interface -->
         <div class="quote-box">
@@ -63,7 +62,7 @@
 
           <div>
             <button type="button" onclick="getQuote2(url)" id="Generate"><img src="generate-icon.png">Generate</button>
-            <button type="button" onclick="shareOnTwitter()" id="share"><img src="x.png">Share</button> 
+            <button type="button" onclick="shareOnX()" id="share"><img src="x.png">Share</button> 
           </div>
 
         </div>
