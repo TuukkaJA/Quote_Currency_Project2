@@ -1,5 +1,5 @@
 //Function to share the quote on Twitter
-function shareOnTwitter () {
+function shareOnX () {
     const quote = document.querySelector(".quote-box blockquote").textContent;
     const author = document.querySelector(".quote-box span").textContent;
     const tweetText = quote + ' -' + author;
